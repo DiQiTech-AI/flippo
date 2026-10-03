@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/eval-case.schema.json",
+  "title": "Annotated evaluation case",
+  "type": "object",
+  "required": ["id", "question"],
+  "properties": {
+    "id": {"type": "string"},
+    "question": {"type": "string"},
+    "request_type": {"enum": ["question", "report"]},
+    "expected_answer_terms": {"type": "array", "items": {"type": "string"}},
+    "acceptable_chunk_ids": {"type": "array", "items": {"type": "string"}},
+    "should_refuse": {"type": "boolean"},
+    "require_query_rewrite": {"type": "boolean"},
+    "metadata": {"type": "object"}
+  }
+}
+

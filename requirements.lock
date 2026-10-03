@@ -1,0 +1,18 @@
+# Exact direct dependency pins for the POC. This is not a fully resolved,
+# hash-locked transitive dependency file; generate one per deployment platform.
+-e .[dev]
+fastapi==0.141.1
+uvicorn[standard]==0.52.1
+python-multipart==0.0.32
+pydantic==2.13.4
+pydantic-settings==2.15.0
+PyMuPDF==1.27.2.3
+markdown-it-py==4.2.0
+numpy==2.5.2
+httpx==0.28.1
+google-adk==1.39.1
+litellm==1.84.10
+google-genai==2.25.0
+pytest==9.1.1
+pytest-asyncio==1.3.0
+jsonschema==4.26.0

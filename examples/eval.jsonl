@@ -1,0 +1,3 @@
+{"id":"retention","question":"How long must approval records be retained?","expected_answer_terms":["seven years"],"should_refuse":false}
+{"id":"unknown-vendor","question":"Which archive software vendor is required?","expected_answer_terms":[],"should_refuse":true}
+{"id":"security-report","question":"Generate a brief about records access security.","request_type":"report","expected_answer_terms":["manager approval","multi-factor authentication"],"should_refuse":false}

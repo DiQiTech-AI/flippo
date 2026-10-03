@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/report.schema.json",
+  "title": "Document analysis report",
+  "type": "object",
+  "required": ["run_id", "document_version", "title", "executive_summary", "findings", "recommendations", "open_questions", "citations"],
+  "properties": {
+    "run_id": {"type": "string", "pattern": "^run_"},
+    "document_version": {"type": "string", "pattern": "^docv_"},
+    "title": {"type": "string"},
+    "executive_summary": {"type": "string"},
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["finding_id", "claim", "evidence_ids", "confidence", "support"],
+        "properties": {
+          "finding_id": {"type": "string"},
+          "claim": {"type": "string"},
+          "evidence_ids": {"type": "array", "items": {"type": "string", "pattern": "^ev_"}},
+          "confidence": {"enum": ["high", "medium", "low"]},
+          "support": {"enum": ["supported", "partially_supported", "unsupported", "conflicting"]}
+        }
+      }
+    },
+    "recommendations": {"type": "array"},
+    "open_questions": {"type": "array", "items": {"type": "string"}},
+    "citations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["evidence_id", "chunk_id", "document_version", "location", "excerpt"],
+        "properties": {
+          "evidence_id": {"type": "string", "pattern": "^ev_"},
+          "chunk_id": {"type": "string", "pattern": "^chk_"},
+          "document_version": {"type": "string"},
+          "location": {"type": "object"},
+          "excerpt": {"type": "string"}
+        }
+      }
+    }
+  }
+}
+
