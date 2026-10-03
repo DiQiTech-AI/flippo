@@ -31,7 +31,7 @@ Flippo is a verifiable RAG workspace for analyzing one document at a time. After
 | Observability | SQLite + content-level JSONL traces recording retrieval, tools, model events, budgets, stop reasons, and citation validation |
 
 <p align="center">
-  <img src="docs/assets/flippo-screenshot.png" alt="Flippo Chinese interface showing document upload, model selection, and the verifiable analysis workspace" width="900">
+  <img src="docs/assets/flippo-screenshot-en.png" alt="Flippo English interface showing document upload, model selection, and the verifiable analysis workspace" width="900">
 </p>
 
 For the design background, see [`rag-document-agent-poc-design.md`](./rag-document-agent-poc-design.md).
